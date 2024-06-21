@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var x = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Circle()
+                .fill(.blue)
+                .padding(20)
+                .overlay(
+                    Image(systemName: "tshirt.fill")
+                        .symbolEffect(.pulse)
+                        .font(.system(size:148))
+                        .foregroundColor(.white)
+                )
+            VStack{
+                Text("Collections")
+                    .font(.largeTitle.bold())
+            }
+            
         }
         .padding()
     }
